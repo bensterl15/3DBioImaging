@@ -1,0 +1,68 @@
+﻿  getopt.c
+  fax3sm_winnt.c
+  tif_aux.c
+  tif_close.c
+  tif_codec.c
+  tif_color.c
+  tif_compress.c
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_compress.c(208,9): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  tif_dir.c
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_dir.c(566,23): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  tif_dirinfo.c
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_dirinfo.c(477,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  tif_dirread.c
+  tif_dirwrite.c
+  tif_dumpmode.c
+  tif_error.c
+  tif_fax3.c
+  tif_flush.c
+  tif_getimage.c
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(183,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(191,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(205,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(216,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(232,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(239,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(246,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(251,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(258,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(266,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(271,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(279,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(345,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(395,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(427,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(438,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(460,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(469,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(474,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(482,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(492,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(497,6): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_getimage.c(508,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  tif_jpeg.c
+  tif_luv.c
+  tif_lzw.c
+  tif_next.c
+  Generating Code...
+  Compiling...
+  tif_ojpeg.c
+  tif_open.c
+C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\tif_open.c(152,8): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  tif_packbits.c
+  tif_pixarlog.c
+  tif_predict.c
+  tif_print.c
+  tif_read.c
+  tif_strip.c
+  tif_swab.c
+  tif_thunder.c
+  tif_tile.c
+  tif_version.c
+  tif_warning.c
+  tif_win32.c
+  tif_write.c
+  tif_zip.c
+  Generating Code...
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1545,5): warning MSB8012: TargetPath(C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\Release\libtiff.lib) does not match the Library's OutputFile property value (C:\Users\bsterling\Downloads\tifflib\libs\libtiff.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  libtiff.vcxproj -> C:\Users\bsterling\Downloads\tifflib\libs\tiff-v3.6.1\libtiff\Release\libtiff.lib

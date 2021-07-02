@@ -1,0 +1,16 @@
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/png-fix-itxt.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/pngtest.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/install/local.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/install.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/genfiles.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/png.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/png_static.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/pngvalid.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/pngunknown.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/pngstest.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/pngimage.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/pngfix.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/test.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug/CMakeFiles/list_install_components.dir

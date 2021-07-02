@@ -1,0 +1,185 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.8.24)  30 JUN 2021 14:15
+entering extended mode
+**./ZebrafishPaper.tex
+(ZebrafishPaper.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-06-18>
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/elsarticle\elsartic
+le.cls
+Document Class: elsarticle 2020/11/20, 3.3: Elsevier Ltd
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2020-06-18 L3 programming layer (loader) 
+
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend
+-pdfmode.def
+File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count167
+\l__pdf_internal_box=\box45
+))
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\x
+parse.sty
+Package: xparse 2020-05-15 L3 Experimental document command parser
+
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\x
+parse-generic.tex
+\l__xparse_current_arg_int=\count168
+\g__xparse_grabber_int=\count169
+\l__xparse_m_args_int=\count170
+\l__xparse_v_nesting_int=\count171
+))
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.s
+ty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count172
+)
+\@bls=\dimen134
+
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count173
+\c@section=\count174
+\c@subsection=\count175
+\c@subsubsection=\count176
+\c@paragraph=\count177
+\c@subparagraph=\count178
+\c@figure=\count179
+\c@table=\count180
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen135
+)
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.s
+ty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.s
+ty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphi
+cs.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex
+.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen136
+\Gin@req@width=\dimen137
+)
+\c@tnote=\count181
+\c@fnote=\count182
+\c@cnote=\count183
+\c@ead=\count184
+\c@author=\count185
+\@eadauthor=\toks16
+\c@affn=\count186
+\absbox=\box46
+\elsarticlehighlightsbox=\box47
+\elsarticlegrabsbox=\box48
+\keybox=\box49
+\Columnwidth=\dimen138
+\space@left=\dimen139
+\els@boxa=\box50
+\els@boxb=\box51
+\leftMargin=\dimen140
+\@enLab=\toks17
+\@sep=\skip49
+\@@sep=\skip50
+ (ZebrafishPaper.spl)
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip51
+\bibsep=\skip52
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count187
+)
+\splwrite=\write3
+\openout3 = `ZebrafishPaper.spl'.
+
+\appnamewidth=\dimen141
+)
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.st
+y
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.s
+ty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks18
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+\c@bla=\count188
+ (ZebrafishPaper.aux)
+\openout1 = `ZebrafishPaper.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pd
+f.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count189
+\scratchdimen=\dimen142
+\scratchbox=\box52
+\nofMPsegments=\count190
+\nofMParguments=\count191
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count192
+\MPscratchDim=\dimen143
+\MPnumerator=\count193
+\makeMPintoPDFobject=\count194
+\everyMPtoPDFconversion=\toks20
+)
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstop
+df-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 146
+.
+
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 146
+.
+
+(C:\Users\bsterling\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Overfull \hbox (2.61108pt too wide) has occurred while \output is active
+[] 
+ []
+
+! I can't write on file `ZebrafishPaper.pdf'.
+Please type another file name for output: 

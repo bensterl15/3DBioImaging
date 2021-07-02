@@ -1,0 +1,141 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "libpng",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "genfiles::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-genfiles-Debug-2f78e2271f51021aef83.json",
+					"name" : "genfiles",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "png::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-png-Debug-512f121b402620416a7d.json",
+					"name" : "png",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "png-fix-itxt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-png-fix-itxt-Debug-3617d255f114f8fd2747.json",
+					"name" : "png-fix-itxt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "png_static::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-png_static-Debug-a50ec7be82320c8578fd.json",
+					"name" : "png_static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pngfix::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pngfix-Debug-8becb43f9b547b57f9c9.json",
+					"name" : "pngfix",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pngimage::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pngimage-Debug-aa634c55f7c7b1d09b97.json",
+					"name" : "pngimage",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pngstest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pngstest-Debug-9f96404d59424b98c5f9.json",
+					"name" : "pngstest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pngtest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pngtest-Debug-3861636176f7083b5bad.json",
+					"name" : "pngtest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pngunknown::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pngunknown-Debug-1bb6a33ebbb8e043b383.json",
+					"name" : "pngunknown",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pngvalid::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pngvalid-Debug-14e39823fea529d0a677.json",
+					"name" : "pngvalid",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637/out/build/x64-Debug",
+		"source" : "C:/Users/bsterling/Desktop/3DBioImaging/Zebrafish/Deng_Shape_cpp/lpng1637"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

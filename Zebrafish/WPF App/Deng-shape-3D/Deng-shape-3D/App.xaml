@@ -1,0 +1,9 @@
+﻿<Application x:Class="Deng_shape_3D.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Deng_shape_3D"
+             StartupUri="Views/SplashScreen.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

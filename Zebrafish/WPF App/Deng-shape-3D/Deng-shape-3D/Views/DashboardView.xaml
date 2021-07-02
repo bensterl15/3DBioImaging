@@ -1,0 +1,27 @@
+﻿<Window x:Class="Deng_shape_3D.DashboardView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Deng_shape_3D"
+        xmlns:views="clr-namespace:Deng_shape_3D.ViewModels"
+        mc:Ignorable="d"
+        Title="Deng-shape-3D" Height="500" Width="800"
+        WindowState="Maximized">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Process">
+                
+            </TabItem>
+            <TabItem Header="View">
+                
+            </TabItem>
+            <TabItem Header="Export">
+                
+            </TabItem>
+            <TabItem Header="Settings">
+                
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
