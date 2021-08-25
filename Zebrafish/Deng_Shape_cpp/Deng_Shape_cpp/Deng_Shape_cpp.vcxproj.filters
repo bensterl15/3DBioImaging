@@ -35,5 +35,8 @@
     <ClInclude Include="Fourier.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Slice.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

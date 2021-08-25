@@ -114,13 +114,19 @@
       <CallingConvention>Cdecl</CallingConvention>
       <AdditionalIncludeDirectories>C:\Users\bsterling\Downloads\fftw-3.3.9.tar\fftw-3.3.9\api;C:\Users\bsterling\Desktop\3DBioImaging\Zebrafish\Deng_Shape_cpp;C:\Users\bsterling\Downloads\tiff-4.3.0rc1\tiff-4.3.0\libtiff\Release;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Full</Optimization>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <OpenMPSupport>true</OpenMPSupport>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>C:\Users\bsterling\Downloads\tiff-4.3.0rc1\tiff-4.3.0\libtiff\Release\tiff.lib;C:\Users\bsterling\Downloads\fftw-3.3.9.tar\fftw-3.3.9\build\Debug\fftw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>C:\Users\bsterling\Downloads\tiff-4.3.0rc1\tiff-4.3.0\libtiff\Release\tiff.lib;C:\Users\bsterling\Downloads\fftw-3.3.9.tar\fftw-3.3.9\build\Debug\fftw3.lib;C:\Users\bsterling\Downloads\fftw-3.3.9.tar\fftw-3.3.9\build\Debug\fftw3f.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <TargetMachine>MachineX64</TargetMachine>
-      <StackReserveSize>20971520</StackReserveSize>
+      <StackReserveSize>100000000</StackReserveSize>
+      <HeapReserveSize>100000000</HeapReserveSize>
+      <StackCommitSize>100000000</StackCommitSize>
+      <HeapCommitSize>100000000</HeapCommitSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -173,6 +179,7 @@
   <ItemGroup>
     <ClInclude Include="Deconvolution.hpp" />
     <ClInclude Include="Fourier.hpp" />
+    <ClInclude Include="Slice.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

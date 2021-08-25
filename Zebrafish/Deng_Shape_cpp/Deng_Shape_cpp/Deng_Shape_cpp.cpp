@@ -8,12 +8,16 @@
 #include <eigen/Eigen/Dense>
 #include <eigen/unsupported/Eigen/CXX11/Tensor>
 
+#include <chrono>
+
 #include "Fourier.hpp"
 
 extern "C"
 {
 #include <stdio.h>
 #include <tiffio.h>
+#include <fftw3.h>
+#include <omp.h>
 }
 
 #include "Deconvolution.hpp"
@@ -35,6 +39,15 @@ void printArray(uint16_t* array, uint16_t width)
 
 int main()
 {
+	// Set the number of threads that Eigen uses:
+	Eigen::setNbThreads(omp_get_max_threads());
+
+	// fftw multithreaded init:
+	fftwf_init_threads();
+	fftwf_plan_with_nthreads(omp_get_max_threads());
+
+	cout << "n threads:" << omp_get_max_threads() << endl;
+
 	// In the future, this path will be passed into the main argument of the program:
 	string path_str = "C:\\Users\\bsterling\\Desktop\\3DBioImaging\\Zebrafish\\Sample_Project\\.data_do_not_delete\\raw\\";
 	cout << path_str << endl << endl;
@@ -132,11 +145,65 @@ int main()
 						TIFFClose(tif);
 					}
 				}
-
 			// Start with Deconvolution:
 			Eigen::Tensor<float, 3, Eigen::RowMajor> PSF(512, 512, 40);
-			Deconvolution deconvolution(&input, &PSF, false);
+
+			//Deconvolution memory initialization:
+			PSF.setZero();
+			// For now, initialize PSF to all ones:
+			PSF += PSF.setConstant(1);
+			PSF(256, 256, 20) = 100;
+
+			Eigen::Tensor<float, 3, Eigen::RowMajor> smallOTF(512 - 2, 512 - 2, 40 - 2);
+			Eigen::Tensor<float, 3, Eigen::RowMajor> apodizeFilter(512 - 2, 512 - 2, 40 - 2);
+			uint16_t * newImageSize = (uint16_t*)malloc(3 * sizeof(uint16_t));
+			memset(newImageSize, 0, 3);
+
+			//Call Deconvolution initializer:
+			Deconvolution deconvolution(&input, &PSF, false, &smallOTF, &apodizeFilter, newImageSize);
+			// Time the deconvolution operation:
+			auto start = chrono::steady_clock::now();
 			deconvolution.calculateSmallOTF();
+			//deconvolution.cropToSmallOTF();
+			//deconvolution.makeApodizationFilter();
+			deconvolution.weinerDeconvolve();
+			auto end = chrono::steady_clock::now();
+
+			//for (uint16_t i = 0; i < N; i++)
+				//cout << fft(i) << endl;
+
+			cout << "Elapsed time in nanoseconds: "
+				<< chrono::duration_cast<chrono::nanoseconds>(end - start).count()
+				<< " ns" << endl;
+
+			cout << "Elapsed time in microseconds: "
+				<< chrono::duration_cast<chrono::microseconds>(end - start).count()
+				<< " µs" << endl;
+
+			cout << "Elapsed time in milliseconds: "
+				<< chrono::duration_cast<chrono::milliseconds>(end - start).count()
+				<< " ms" << endl;
+
+			cout << "Elapsed time in seconds: "
+				<< chrono::duration_cast<chrono::seconds>(end - start).count()
+				<< " sec" << endl;
+			/*
+			Eigen::Tensor<float, 3, Eigen::RowMajor> m(2, 2, 2);
+			Eigen::Tensor<complex<float>, 3, Eigen::RowMajor> f(2, 2, 2);
+
+			m(0, 0, 0) = 1;
+			m(0, 0, 1) = 2;
+			m(0, 1, 0) = 3;
+			m(0, 1, 1) = 4;
+			m(1, 0, 0) = 5;
+			m(1, 0, 1) = 6;
+			m(1, 1, 0) = 7;
+			m(1, 1, 1) = 8;
+
+			Eigen::Tensor<float, 2, Eigen::RowMajor> ugh(2, 2); 
+			ugh = m.chip(0, 2);
+			cout << ugh << endl;
+			*/
 		}
 		else {
 			cout << "Error: A time folder is empty" << endl;
@@ -161,7 +228,6 @@ int main()
 
 	// Save to csv file:
 	// const static Eigen::IOFormat::IOFormat CSVFormat(Eigen::__unnamed_enum_025f_2::FullPrecision, Eigen::__unnamed_enum_025f_1::DontAlignCols, ", ", "\n")
-	#include <chrono>
 	#define N 10000000
 	Eigen::Tensor<float, 1, Eigen::RowMajor> signal(N);
 	Eigen::Tensor<complex<float>, 1, Eigen::RowMajor> fft(N);
@@ -274,14 +340,78 @@ cout << b.convolve(m, dims);
 
 // Take a slice of Eigen::Tensor:
 /*
-Eigen::array<int, 4> offsets = { 0, 0, 0, 0 };
-Eigen::array<int, 4> extents = { 512, 512, 1, 1 };
-
-auto slice = input.slice(offsets, extents);
+Eigen::Tensor<int, 2> a(4, 3);
+a.setValues({ {0, 100, 200}, {300, 400, 500},
+				{600, 700, 800}, {900, 1000, 1100} });
+Eigen::DSizes<ptrdiff_t, 2> offsets2( 1, 0 );
+Eigen::DSizes<ptrdiff_t, 2> extents2( 2, 2 );
+Eigen::Tensor<int, 2> slice = a.slice(offsets2, extents2);
+cout << "slice" << endl << slice << endl;
 
 // C fwrite is MUCH faster than C++ stream:
 FILE* fp;
 fp = fopen("C:\\Users\\bsterling\\Desktop\\ugh.txt", "w");
 fwrite(input.data(), sizeof(float), 52428800, fp);
 fclose(fp);
+*/
+
+/* 3D Fourier Transform Module Example :
+	Eigen::Tensor<float, 3, Eigen::RowMajor> m(2, 2, 2);
+	Eigen::Tensor<complex<float>, 3, Eigen::RowMajor> f(2, 2, 2);
+
+	m(0, 0, 0) = 1;
+	m(0, 0, 1) = 2;
+	m(0, 1, 0) = 3;
+	m(0, 1, 1) = 4;
+	m(1, 0, 0) = 5;
+	m(1, 0, 1) = 6;
+	m(1, 1, 0) = 7;
+	m(1, 1, 1) = 8;
+
+	Fourier3D fourier3(&m, &f, 2, 2, 2);
+
+	cout << m << endl;
+
+	fourier3.fftshift();
+	//fourier3.compute_fft();
+
+	cout << m << endl;
+*/
+
+/*
+			#define N 4
+			Eigen::Tensor<float, 1, Eigen::RowMajor> signal(N);
+			Eigen::Tensor<complex<float>, 1, Eigen::RowMajor> fft(N/2 + 1);
+
+			for (int i = 0; i < N; i++) {
+				signal(i) = i;
+			}
+
+			for (uint16_t i = 0; i < N; i++)
+				cout << signal(i) << endl;
+
+			Fourier1DR fourier(&signal, &fft, N);
+
+			start = chrono::steady_clock::now();
+			fourier.compute_fft();
+			end = chrono::steady_clock::now();
+
+			for (uint16_t i = 0; i < 3; i++)
+				cout << fft(i) << endl;
+
+			cout << "Elapsed time in nanoseconds: "
+				<< chrono::duration_cast<chrono::nanoseconds>(end - start).count()
+				<< " ns" << endl;
+
+			cout << "Elapsed time in microseconds: "
+				<< chrono::duration_cast<chrono::microseconds>(end - start).count()
+				<< " µs" << endl;
+
+			cout << "Elapsed time in milliseconds: "
+				<< chrono::duration_cast<chrono::milliseconds>(end - start).count()
+				<< " ms" << endl;
+
+			cout << "Elapsed time in seconds: "
+				<< chrono::duration_cast<chrono::seconds>(end - start).count()
+				<< " sec" << endl;
 */
