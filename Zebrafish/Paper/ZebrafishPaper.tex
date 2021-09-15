@@ -33,6 +33,7 @@
 
 %% The amssymb package provides various useful mathematical symbols
 \usepackage{amssymb}
+\usepackage{amsmath}
 %% The amsthm package provides extended theorem environments
 %% \usepackage{amsthm}
 
@@ -107,7 +108,7 @@
 %% \address{Address\fnref{label3}}
 %% \fntext[label3]{}
 
-\title{A \LaTeX{} template for CPC Computer Programs in Physics (CPiP) articles}
+\title{First Curvature-Based Protrusion Tracking Framework}
 
 %% use optional labels to link authors explicitly to addresses:
 %% \author[label1,label2]{<author name>}
@@ -195,8 +196,170 @@ of programs previously published in the CPC Program Library.\\
 
 
 %% main text
-\section{}
-\label{}
+\section{Mean Curvature Distribution Derivation (Exponential Decay Case)}
+
+Suppose our protrusion can be modeled by the following structure:
+
+\begin{gather}
+	U, V iid \sim U(0,1) \\	
+	Z = e^{-\lambda(U + V)} \\
+	\mathbf{r} = U \mathbf{U}_1 + V \mathbf{U}_2 + Z \mathbf{U}_3 \\
+	\mathbf{r}_U = \mathbf{U}_1 - \lambda e^{-\lambda(U + V)}\mathbf{U}_3 \\
+	\mathbf{r}_V = \mathbf{U}_2 - \lambda e^{-\lambda(U + V)}\mathbf{U}_3
+\end{gather}
+
+\begin{figure}
+\includegraphics[width=15cm]{exp_protrusion}
+\caption{Protrusion modelled with Exponential Decay}
+\label{fig:exp_protrusion}
+\end{figure}
+
+A visualization is provided in Figure \ref{fig:exp_protrusion}. We utilize the following properties from Barret O'Neill (todo, cite here):
+
+\begin{gather}
+	E = \mathbf{r}_U \cdot \mathbf{r}_U \\
+	F = \mathbf{r}_U \cdot \mathbf{r}_V \\
+	G = \mathbf{r}_V \cdot \mathbf{r}_V \\
+	EG - F^2 = ||\mathbf{r}_U \times \mathbf{r}_V||^2 \\
+	L = S(\mathbf{r}_U) \cdot \mathbf{r}_U \\
+	M = S(\mathbf{r}_U) \cdot \mathbf{r}_V = S(\mathbf{r}_V) \cdot \mathbf{r}_U \\
+	N = S(\mathbf{r}_V) \cdot \mathbf{r}_V \\
+	H = \frac{GL + EN - 2FM}{2(EG - F^2)}
+\end{gather}
+
+where H is the mean curvature, E, F, and G are the coefficients from the first fundamental form, and L, M, and N are the coefficients from the second fundamental form. The shape operator is defined as:
+
+\begin{gather}
+	S(\mathbf{V}) = -\nabla_{\mathbf{V}} \mathbf{U}
+\end{gather}
+
+where $\nabla_{V}$ is the covariant derivative with respect to a tangent vector $\mathbf{V}$, and $\mathbf{U}$ is the unit normal vector, which is given by:
+
+\begin{gather}
+	\mathbf{U} = \frac{\mathbf{r}_U \times \mathbf{r}_V}{||\mathbf{r}_U \times \mathbf{r}_V||}
+\end{gather}
+
+For our specific mapping $\mathbf{r}$, we obtain:
+
+\begin{gather}
+	E = 1 + \lambda^{2} e^{-2\lambda(U + V)} \\
+	F = \lambda^{2} e^{-2\lambda(U + V)} \\
+	G = 1 + \lambda^{2} e^{-2\lambda(U + V)} \\
+	EG - F^{2} = 1 + 2\lambda^{2} e^{-2\lambda(U + V)} \\
+	\mathbf{U} = \frac{\lambda e^{-\lambda(U + V)}(\mathbf{U}_1 + \mathbf{U}_2) + \mathbf{U}_3}{\sqrt{1 + 2\lambda^{2} e^{-2\lambda(U + V)}}}
+\end{gather}
+
+To calculate the coefficients of the second fundamental form, we begin by calculating the shape operator:
+
+\begin{gather}
+	S(\mathbf{r}_U) = -\nabla_{\mathbf{U}_1 - \lambda e^{\lambda(U + V)}\mathbf{U}_3} \frac{\lambda e^{-\lambda(U + V)}(\mathbf{U}_1 + \mathbf{U}_2) + \mathbf{U}_3}{\sqrt{1 + 2\lambda^{2} e^{-2\lambda(U + V)}}} \\
+	= -\nabla_{\mathbf{U}_1} \frac{\lambda e^{-\lambda(U + V)}(\mathbf{U}_1 + \mathbf{U}_2) + \mathbf{U}_3}{\sqrt{1 + 2\lambda^{2} e^{-2\lambda(U + V)}}}
+\end{gather}
+
+The above reduction happens because there is no Z variable in the unit normal vector. Furthermore, a covariant derivative with respect to $\mathbf{U}_1$ is just a partial derivative with respect to $U$.
+
+\begin{gather}
+	S(\mathbf{r}_U) = -\frac{\partial}{\partial U} \frac{\lambda e^{-\lambda(U + V)}(\mathbf{U}_1 + \mathbf{U}_2) + \mathbf{U}_3}{\sqrt{1 + 2\lambda^{2} e^{-2\lambda(U + V)}}} \\
+	= -\frac{\big(-\lambda^{2}(1 + 2\lambda^{2}e^{-2\lambda(U+V)})e^{-\lambda(U+V)} + 2\lambda^{4}e^{-3\lambda(U+V)}\big)(\mathbf{U}_1 + \mathbf{U}_2) + 2\lambda^{3}e^{-2\lambda(U+V)}\mathbf{U}_3}{(1 + 2\lambda^{2}e^{-2\lambda(U + V)})^{\frac{3}{2}}}
+\end{gather}
+
+Note that $S(\mathbf{r}_U) = S(\mathbf{r}_V)$ due to the symmetry of the above derivation. Furthermore, we observe $L = M = N$ once again due to symmetry. Thus:
+
+\begin{gather}
+	L = M = N = \frac{\lambda^{2}}{\sqrt{1 + 2\lambda^{2}e^{-2\lambda(U + V)}}}
+\end{gather}
+
+Finally, we derive an expression for the mean curvature.
+
+\begin{gather}
+	H = \frac{\lambda^{2}}{(1 + 2\lambda^{2}e^{-2\lambda(U + V)})^{\frac{3}{2}}}
+\end{gather}
+
+When $\lambda = 1$ the histogram of H as a random variable (estimated with Monte-Carlo), resembles Figure \ref{fig:exp_decay_distribution}.
+
+\begin{figure}
+\includegraphics[width=15cm]{exp_decay_distribution}
+\caption{Histogram of Mean Curvature with Exponential Decay}
+\label{fig:exp_decay_distribution}
+\end{figure}
+
+\section{Mean Curvature Distribution Derivation (Gaussian Decay Case)}
+
+We now wish to extend the previous derivation to protrusions with thinner tails and mass held closer to their centers.
+
+\begin{gather}
+	U, V iid \sim U(0,1) \\	
+	Z = e^{-\lambda(U^2 + V^2)} \\
+	\mathbf{r} = U \mathbf{U}_1 + V \mathbf{U}_2 + Z \mathbf{U}_3 \\
+	\mathbf{r}_U = \mathbf{U}_1 - 2\lambda U e^{-\lambda(U^2 + V^2)}\mathbf{U}_3 \\
+	\mathbf{r}_V = \mathbf{U}_2 - 2\lambda V e^{-\lambda(U^2 + V^2)}\mathbf{U}_3
+\end{gather}
+
+\begin{figure}
+\includegraphics[width=15cm]{gaussian_protrusion}
+\caption{Protrusion modelled with Gaussian Decay}
+\label{fig:gaussian_protrusion}
+\end{figure}
+
+A visualization is provided in Figure \ref{fig:gaussian_protrusion}. For our new mapping $\mathbf{r}$, we obtain:
+
+\begin{gather}
+	E = 1 + 4 \lambda^{2} U^{2} e^{-2\lambda(U^2 + V^2)} \\
+	F = 4 \lambda^{2} U V e^{-2\lambda(U^2 + V^2)} \\
+	G = 1 + 4 \lambda^{2} V^{2} e^{-2\lambda(U^2 + V^2)} \\
+	EG - F^{2} = 1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2) \\
+	\mathbf{U} = \frac{2\lambda e^{-\lambda(U^2 + V^2)}(U\mathbf{U}_1 + V\mathbf{U}_2) + \mathbf{U}_3}{\sqrt{1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2)}}
+\end{gather}
+
+To calculate the coefficients of the second fundamental form, we begin by calculating the shape operator:
+
+\begin{gather}
+	S(\mathbf{r}_U) = -\nabla_{\mathbf{U}_1 - 2\lambda U e^{-\lambda(U^2 + V^2)}\mathbf{U}_3} \frac{2\lambda e^{-\lambda(U^2 + V^2)}(U\mathbf{U}_1 + V\mathbf{U}_2) + \mathbf{U}_3}{\sqrt{1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2)}} \\
+\end{gather}
+
+Once again, this covariant derivative reduces to a partial derivative with respect to $U$.
+
+\begin{gather}
+	S(\mathbf{r}_U) = -\frac{\partial}{\partial U} \frac{2\lambda e^{-\lambda(U^2 + V^2)}(U\mathbf{U}_1 + V\mathbf{U}_2) + \mathbf{U}_3}{\sqrt{1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2)}}
+\end{gather}
+
+Due to the complexity of the answer, $S(\mathbf{r}_U)$ is presented component by component:
+
+\begin{gather}
+	-\frac{2\lambda (1 - 2\lambda U^{2}) e^{-\lambda(U^2 + V^2)}\big(1 + 4\lambda^{2}e^{-2\lambda (U^2 + V^2)}(U^2 + V^2)\big) + 8\lambda^{3}U^{2}e^{-3\lambda(U^2 + V^2)}(1-2\lambda(U^2 + V^2))}{(1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2))^{\frac{3}{2}}} \\
+	-\frac{-4\lambda^{2} U V e^{-\lambda(U^2 + V^2)}\big(1 + 4\lambda^{2}e^{-2\lambda (U^2 + V^2)}(U^2 + V^2)\big) + 8\lambda^{3}U V e^{-3\lambda(U^2 + V^2)}(1-2\lambda(U^2 + V^2))}{(1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2))^{\frac{3}{2}}}	\\
+	\frac{4\lambda^{2}U e^{-2\lambda(U^2 + V^2)}(1 - 2\lambda(U^2 + V^2))}{(1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2))^{\frac{3}{2}}}
+\end{gather}
+
+To reduce the complexity of this problem, for large enough $\lambda$, we assume that $e^{-3\lambda(U^2 + V^2)} \to 0$, as this takes a relatively small number to the third power. Thus:
+
+\begin{gather}
+	S(\mathbf{r}_U) \approx \frac{-2\lambda (1 - 2\lambda U^{2}) e^{-\lambda(U^2 + V^2)}}{\sqrt{1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2)}}\mathbf{U}_1 + \\
+	\frac{4\lambda^{2} U V e^{-\lambda(U^2 + V^2)}}{\sqrt{1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2)}}\mathbf{U}_2 + \\
+	\frac{4\lambda^{2}U e^{-2\lambda(U^2 + V^2)}(1 - 2\lambda(U^2 + V^2))}{(1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2))^{\frac{3}{2}}}\mathbf{U}_3
+\end{gather}
+
+Once again utilizing $e^{-3\lambda(U^2 + V^2)} \to 0$, and the symmetry of $S(\mathbf{r}_U)$ and $S(\mathbf{r}_V)$:
+
+\begin{gather}
+	L = S(\mathbf{r}_U) \cdot \mathbf{r}_U \approx \frac{-2\lambda (1 - 2\lambda U^{2}) e^{-\lambda(U^2 + V^2)}}{\sqrt{1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2)}} \\
+	M = S(\mathbf{r}_U) \cdot \mathbf{r}_V \approx \frac{4\lambda^{2} U V e^{-\lambda(U^2 + V^2)}}{\sqrt{1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2)}} \\
+	N = S(\mathbf{r}_V) \cdot \mathbf{r}_V \approx \frac{-2\lambda (1 - 2\lambda V^{2}) e^{-\lambda(U^2 + V^2)}}{\sqrt{1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2)}} \\
+\end{gather}
+
+Finally, (applying $e^{-3\lambda(U^2 + V^2)} \to 0$ once more), we obtain:
+
+\begin{gather}
+	H = \frac{2\big(\lambda(U^2 + V^2) - 1 \big)e^{-\lambda(U^2 + V^2)}}{(1 + 4\lambda^{2} e^{-2\lambda(U^2 + V^2)}(U^2 + V^2))^{\frac{3}{2}}}
+\end{gather}
+
+When $\lambda = 1$ the histogram of H as a random variable (estimated with Monte-Carlo), resembles Figure \ref{fig:gaussian_decay_distribution}.
+
+\begin{figure}
+\includegraphics[width=15cm]{gaussian_decay_distribution}
+\caption{Histogram of Mean Curvature with Exponential Decay}
+\label{fig:gaussian_decay_distribution}
+\end{figure}
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
